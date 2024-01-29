@@ -421,12 +421,12 @@ vendor/lib64/libstagefright_soft_ac4dec.so
 vendor/lib64/libstagefright_soft_ddpdec.so
 vendor/lib64/libstagefrightdolby.so
 
-# Dolby App (OnePlus)
-system_ext/etc/sysconfig/config-com.dolby.daxappui.xml|fce084b5ea52db53d25a7bbf64d8c7ce
-system_ext/etc/sysconfig/config-com.dolby.daxservice.xml|cd1424d569038a393fccadb457c930c2
-system_ext/etc/sysconfig/hiddenapi-com.dolby.daxservice.xml|3d8dfe8008f667cf2b3572983c08c3af
-system_ext/priv-app/DaxUI/DaxUI.apk|e176f7b5663cf6292ac3cac61d7f1ce1
-system_ext/priv-app/daxService/daxService.apk|493c2c391a73facb9e0dc9e8ec921705
+# Dolby App - from OnePlus
+system_ext/etc/sysconfig/config-com.dolby.daxappui.xml|43c610f41061f49959ce07b26c60427b8767e535
+system_ext/etc/sysconfig/config-com.dolby.daxservice.xml|7690774632fe32269657fc1a2a0c941c7cd83f3d
+system_ext/etc/sysconfig/hiddenapi-com.dolby.daxservice.xml|f647356bd3a4bb4174e873e4544c2921d51fd4d2
+system_ext/priv-app/DaxUI/DaxUI.apk|a87bcf11be5c243b468fe4c84dfa313d65cb2933
+system_ext/priv-app/daxService/daxService.apk|d1857a2ca1fa4cb89d24de9bacec8d54aa3c3ab3
 
 # Fingerprint
 vendor/lib64/hw/fingerprint.fpc.so:vendor/lib64/hw/fingerprint.fpc.default.so
