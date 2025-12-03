@@ -1,0 +1,11 @@
+[
+  {
+    "repository": "PixelOS-Devices/android_device_xiaomi_sm8250-common",
+    "target_path": "device/xiaomi/sm8250-common"
+  }
+  {
+    "remote": "gitlab",
+    "repository": "NoPrincessHere/proprietary_vendor_xiaomi_alioth",
+    "target_path": "vendor/xiaomi/alioth"
+  }
+]
