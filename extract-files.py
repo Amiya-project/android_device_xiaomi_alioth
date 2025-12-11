@@ -21,11 +21,16 @@ blob_fixups: blob_fixups_user_type = {
         .regex_replace('.*seclabel u:r:batterysecret:s0\n', ''),
     'vendor/etc/libnfc-nci.conf': blob_fixup()
         .add_line_if_missing('LEGACY_MIFARE_READER=1'),
+    'vendor/lib/libaudiocloudctrl.so': blob_fixup()
+        .replace_needed('libtinyxml2.so', 'libtinyxml2-v34.so'),
+    'vendor/lib/libaudioroute_ext.so': blob_fixup()
+        .replace_needed('libaudioroute.so', 'libaudioroute-v34.so'),
     'vendor/lib/hw/audio.primary.alioth.so': blob_fixup()
         .binary_regex_replace(
             b'/vendor/lib/liba2dpoffload.so',
             b'liba2dpoffload_alioth.so\x00\x00\x00\x00\x00',
-        ),
+        )
+        .replace_needed('libaudioroute.so', 'libaudioroute-v34.so'),
     'vendor/lib64/camera/components/com.mi.node.watermark.so': blob_fixup()
         .add_needed('libpiex_shim.so'),
     'vendor/lib64/hw/camera.qcom.so': blob_fixup()
@@ -58,8 +63,6 @@ blob_fixups: blob_fixups_user_type = {
         .clear_symbol_version('remote_register_buf_attr'),
     'vendor/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.so': blob_fixup()
         .binary_regex_replace(b'\x9A\x0A\x00\x94', b'\x1F\x20\x03\xD5'),
-    ('vendor/lib/hw/audio.primary.alioth.so','vendor/lib/libaudioroute_ext.so'): blob_fixup()
-        .replace_needed('libaudioroute.so', 'libaudioroute-v34.so'),
 }  # fmt: skip
 
 namespace_imports = [
