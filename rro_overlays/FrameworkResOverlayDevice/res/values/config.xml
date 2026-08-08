@@ -453,16 +453,22 @@
     <!-- Slow brightness animation ramp rate in brightness units per second-->
     <integer translatable="false" name="config_brightness_ramp_rate_slow">1973</integer>
 
+    <!-- Screen brightness used to dim the screen when the user activity
+    timeout expires.  May be less than the minimum allowed brightness setting
+    that can be set by the user. -->
+    <item name="config_screenBrightnessDimFloat" format="float" type="dimen">0.02442598925</item>
+
+    <!-- Minimum screen brightness setting allowed by power manager.
+    -2 is invalid so setting will resort to int value specified above.
+    Set this to 0.0 to allow screen to go to minimal brightness.
+    The user is forbidden from setting the brightness below this level. -->
+    <item name="config_screenBrightnessSettingMinimumFloat" format="float" type="dimen">0.02442598925</item>
+
     <!-- Maximum screen brightness allowed by the power manager.
-        The user is forbidden from setting the brightness above this level. -->
-    <integer name="config_screenBrightnessSettingMaximum">8191</integer>
-
-    <!-- Minimum screen brightness setting allowed by the power manager.
-        The user is forbidden from setting the brightness below this level. -->
-    <integer name="config_screenBrightnessSettingMinimum">7</integer>
-
-    <!-- Minimum screen brightness allowed by the power manager. -->
-    <integer name="config_screenBrightnessDim">13</integer>
+    -2 is invalid so setting will resort to int value specified above.
+    Set this to 1.0 for maximum brightness range.
+    The user is forbidden from setting the brightness above this level. -->
+    <item name="config_screenBrightnessSettingMaximumFloat" format="float" type="dimen">1.0</item>
 
     <!-- The bounding path of the cutout region of the main built-in display.
          Must either be empty if there is no cutout region, or a string that is parsable by
