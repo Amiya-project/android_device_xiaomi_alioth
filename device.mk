@@ -36,6 +36,10 @@ PRODUCT_COPY_FILES += \
 # Device-specific settings
 PRODUCT_PACKAGES += \
     DSPVolumeSynchronizer
+    
+# Dolby
+PRODUCT_COPY_FILES += \
+    device/xiaomi/alioth/configs/multimedia_dolby_dax_default.xml:$(TARGET_COPY_OUT_ODM)/etc/dolby/multimedia_dolby_dax_default.xml
 
 # Init
 $(call soong_config_set,xiaomi_kona,variant_lib,//$(LOCAL_PATH):libvariant_xiaomi_alioth)

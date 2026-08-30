@@ -11,6 +11,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit some common PixelOS stuff.
 $(call inherit-product, vendor/custom/config/common_full_phone.mk)
 
+# Dolby
+TARGET_USES_CUSTOM_DOLBY_XML:= true
+
 # Inherit from alioth device
 $(call inherit-product, device/xiaomi/alioth/device.mk)
 
